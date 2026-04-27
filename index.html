@@ -3,154 +3,270 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kael Portfolio</title>
+<title>Kael Developer | Portfolio</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
 font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+background:#050816;
 color:white;
-line-height:1.6;
+overflow-x:hidden;
 }
 
-header{
-padding:80px 20px;
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
+padding:40px 20px;
+background:
+radial-gradient(circle at top left,#2563eb55,transparent 35%),
+radial-gradient(circle at bottom right,#06b6d455,transparent 35%),
+#050816;
 }
 
-header h1{
-font-size:55px;
-margin-bottom:15px;
+.hero-content{
+max-width:900px;
 }
 
-header p{
-font-size:22px;
-color:#cbd5e1;
-max-width:700px;
-margin:auto;
-}
-
-.btn{
+.badge{
 display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:#38bdf8;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-size:18px;
-transition:0.3s;
+padding:10px 18px;
+border:1px solid #38bdf8;
+border-radius:999px;
+color:#38bdf8;
+margin-bottom:25px;
+font-size:15px;
 }
 
-.btn:hover{
-background:#0ea5e9;
-transform:translateY(-3px);
+h1{
+font-size:72px;
+line-height:1;
+margin-bottom:20px;
+}
+
+.gradient{
+background:linear-gradient(90deg,#38bdf8,#818cf8,#c084fc);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+font-size:23px;
+color:#cbd5e1;
+margin-bottom:35px;
+}
+
+.buttons a{
+display:inline-block;
+margin:10px;
+padding:15px 30px;
+border-radius:14px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.primary{
+background:#38bdf8;
+color:#020617;
+}
+
+.secondary{
+border:1px solid #64748b;
+color:white;
 }
 
 section{
-padding:60px 20px;
-max-width:1100px;
+padding:80px 20px;
+max-width:1150px;
 margin:auto;
 }
 
 h2{
-font-size:38px;
-margin-bottom:30px;
 text-align:center;
+font-size:42px;
+margin-bottom:40px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
 .card{
 background:rgba(255,255,255,0.08);
-padding:25px;
-border-radius:18px;
-backdrop-filter:blur(8px);
+border:1px solid rgba(255,255,255,0.12);
+border-radius:24px;
+padding:28px;
 transition:0.3s;
+box-shadow:0 0 40px rgba(56,189,248,0.08);
 }
 
 .card:hover{
-transform:translateY(-6px);
-background:rgba(255,255,255,0.12);
+transform:translateY(-8px);
+border-color:#38bdf8;
+box-shadow:0 0 35px rgba(56,189,248,0.25);
 }
 
 .card h3{
-margin-bottom:10px;
 font-size:24px;
+margin-bottom:12px;
 }
 
 .card p{
-color:#d1d5db;
+color:#cbd5e1;
+font-size:16px;
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
+}
+
+.skill{
+padding:13px 20px;
+border-radius:999px;
+background:rgba(56,189,248,0.12);
+border:1px solid rgba(56,189,248,0.4);
+color:#bae6fd;
+}
+
+.about{
+text-align:center;
+max-width:850px;
+}
+
+.about p{
+font-size:20px;
+color:#cbd5e1;
 }
 
 footer{
 text-align:center;
-padding:40px 20px;
+padding:40px;
 color:#94a3b8;
-font-size:15px;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+@media(max-width:700px){
+h1{font-size:48px;}
+.hero p{font-size:19px;}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Kael Developer</h1>
-<p>Young builder creating websites, games and digital projects. Passionate about technology, design and innovation.</p>
-<a href="#projects" class="btn">View Projects</a>
-</header>
+<div class="hero">
+<div class="hero-content">
+<div class="badge">Teen Builder • Webflow Developer • Game Creator</div>
+
+<h1>Hi, I'm <span class="gradient">Kael</span></h1>
+
+<p>
+I build websites, digital experiences and game prototypes. 
+I create real projects using Webflow, design tools, code and AI.
+</p>
+
+<div class="buttons">
+<a href="#projects" class="primary">View My Projects</a>
+<a href="#skills" class="secondary">My Skills</a>
+</div>
+</div>
+</div>
+
+<section class="about">
+<h2>About Me</h2>
+<p>
+I'm a young technology builder focused on web design, software, games and artificial intelligence.
+I have already created functional websites with Webflow, experimented with game prototypes and continue learning by building real projects.
+</p>
+</section>
 
 <section id="projects">
-<h2>Projects</h2>
+<h2>Featured Projects</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>Restaurant Website</h3>
-<p>Professional website created for a real local business with modern design and contact features.</p>
+<p>
+A functional website prototype created for a real restaurant using Webflow. 
+Focused on visual design, user experience and business presentation.
+</p>
 </div>
 
 <div class="card">
-<h3>Family Business Project</h3>
-<p>Functional website developed for a family initiative with branding and structure.</p>
+<h3>Family Project Website</h3>
+<p>
+A real digital project built for a family initiative, including structure, branding and online presence.
+</p>
 </div>
 
 <div class="card">
 <h3>Game Prototypes</h3>
-<p>Creative game concepts and playable prototypes built from scratch.</p>
+<p>
+Creative game concepts and playable ideas built through experimentation, logic and design.
+</p>
 </div>
 
+<div class="card">
+<h3>AI-Assisted Learning</h3>
+<p>
+I use AI as a learning partner to understand code, improve design and build better projects faster.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+
+<div class="skills">
+<div class="skill">Webflow</div>
+<div class="skill">Web Design</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">GitHub</div>
+<div class="skill">Game Prototyping</div>
+<div class="skill">AI Tools</div>
+<div class="skill">Creative Problem Solving</div>
+<div class="skill">Responsive Design</div>
 </div>
 </section>
 
 <section>
-<h2>Skills</h2>
+<h2>Vision</h2>
 
 <div class="grid">
+<div class="card">
+<h3>Technology</h3>
+<p>I want to keep growing in software development, artificial intelligence and digital products.</p>
+</div>
 
-<div class="card"><h3>HTML / CSS</h3></div>
-<div class="card"><h3>Web Design</h3></div>
-<div class="card"><h3>GitHub</h3></div>
-<div class="card"><h3>Creative Building</h3></div>
-<div class="card"><h3>AI Tools</h3></div>
-<div class="card"><h3>Game Concepts</h3></div>
+<div class="card">
+<h3>Real Projects</h3>
+<p>My goal is to keep building websites, apps and games that solve real problems.</p>
+</div>
 
+<div class="card">
+<h3>Future</h3>
+<p>I am preparing early for opportunities in technology, innovation and world-class education.</p>
+</div>
 </div>
 </section>
 
 <footer>
-© 2026 Kael Portfolio
+© 2026 Kael Developer — Built with code and ambition.
 </footer>
 
 </body>
 </html>
+
